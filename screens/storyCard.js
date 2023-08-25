@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, StyleSheet, Platform, StatusBar, Dimensions, Image } from 'react-native'
+import { Text, View, StyleSheet, Platform, StatusBar, Dimensions, Image, TouchableOpacity } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import * as Font from 'expo-font'
 import * as SplashScreen from 'expo-splash-screen'
@@ -28,7 +28,7 @@ export default class StoryCard extends React.Component {
         if (this.state.fontsLoaded) {
             SplashScreen.hideAsync();
             return (
-                <View style={styles.container}>
+                <TouchableOpacity style={styles.container} onPress={() => this.props.navigation.navigate('StoryScreen', {story: this.props.story})}>
                     <View style={styles.cardContainer}>
                         <Image style={styles.storyImage} source={require('../assets/story_image_1.png')} />
                         <View style={styles.titleContainer}>
@@ -52,7 +52,7 @@ export default class StoryCard extends React.Component {
                             </View>
                         </View>
                     </View>
-                </View>
+                </TouchableOpacity>
             )
         }
     }

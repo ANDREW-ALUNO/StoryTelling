@@ -33,7 +33,7 @@ export default class CreateStory extends React.Component {
                 'image_2': require("../assets/story_image_2.png"),
                 'image_3': require("../assets/story_image_3.png"),
                 'image_4': require("../assets/story_image_4.png"),
-                'image_5': require("../assets/story_image_5.png")
+                'image_5': require("../assets/story_image_5.png"),
             }
             return (
                 <View style={styles.container}>
